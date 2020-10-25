@@ -1,0 +1,54 @@
+html
+    head
+        title Редактировать картину
+        link(rel="stylesheet" href="/public/css/uikit.min.css" type="text/css")
+        script(src="/public/js/jquery.min.js")
+        script(src="/public/js/uikit.min.js")
+        script(src="/public/js/main.min.js")
+        script(src="/public/js/uikit-icons.min.js")
+
+    body
+        div.uk-container-small.uk-container
+            include ../../modules/menu
+
+        div.file-watcher-block.uk-container.uk-container-small.uk-margin
+        div.uk-container.uk-container-small.uk-margin
+            div.js-upload.uk-margin-small-right(uk-form-custom="")
+                input(type='file' name="file" accept="image/x-png,image/gif,image/jpeg")
+                button.uk-button.uk-button-default(type='button') Выбрать файл
+
+            button.uk-button.uk-button-primary#upload-image-button(type='button') Загрузить
+
+            label.uk-margin-small-left#upload-file-name
+
+        div.uk-margin.uk-container.uk-container-small
+            div.uk-margin
+                label.uk-form-label Название
+                input.uk-input(type='text' name='title')
+
+            div.uk-margin
+                label.uk-form-label Описание
+                input.uk-input(type='text' name='description')
+
+            div.uk-margin
+                label.uk-form-label Автор
+                input.uk-input(type='text' name='author')
+
+            div.uk-margin
+                label.uk-form-label Начальная цена
+                input.uk-input(type='number' name='price-start')
+
+            div.uk-margin
+                label.uk-form-label Минимальный шаг цены
+                input.uk-input(type='number' name='price-minstep')
+
+            div.uk-margin
+                label.uk-form-label Максимальный шаг цены
+                input.uk-input(type='number' name='price-maxstep')
+
+            div.uk-margin
+                button.uk-button.uk-button-primary#save-picture(type='button') Сохранить
+                button.uk-button.uk-button-danger.uk-margin-small-left#delete-picture(type='button') Удалить
+
+
+        script(src="/public/js/auction/editPicture.min.js")

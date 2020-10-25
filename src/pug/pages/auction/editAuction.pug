@@ -1,0 +1,36 @@
+html
+    head
+        title Настройки аукциона
+        link(rel="stylesheet" href="/public/css/uikit.min.css" type="text/css")
+        script(src="/public/js/jquery.min.js")
+        script(src="/public/js/uikit.min.js")
+        script(src="/public/js/main.min.js")
+        script(src="/public/js/uikit-icons.min.js")
+
+    body
+        div.uk-container.uk-container-small
+            include ../../modules/menu
+
+        div.uk-container.uk-container-small
+            h2 Параметры
+            div#auction-form.uk-form-stacked
+                div.uk-margin
+                    label.uk-form-label Название
+                    input.uk-input(type='text' name='title' placeholder='Название')
+                div.uk-margin
+                    label.uk-form-label Задержка перед продажей (сек)
+                    input.uk-input(type='number' name='selltimeout')
+                div.uk-margin
+                    label.uk-form-label Время предпоказа (сек)
+                    input.uk-input(type='number' name='inputpause')
+                div.uk-margin
+                    label.uk-form-label Время начала
+                    input.uk-input(type='datetime-local' name='starttime')
+                div.uk-margin
+                    label.uk-form-label Время окончания
+                    input.uk-input(type='datetime-local' name='endtime')
+
+                div.uk-margin#save-auction
+                    input.uk-button.uk-button-primary(type='button' value='Сохранить')
+
+        script(src="/public/js/auction/editAuction.min.js")

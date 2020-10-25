@@ -1,0 +1,42 @@
+html
+    head
+        title Вход
+        link(rel="stylesheet" href="/public/css/uikit.min.css" type="text/css")
+        script(src="/public/js/jquery.min.js")
+        script(src="/public/js/uikit.min.js")
+        script(src="/public/js/main.min.js")
+        script(src="/public/js/uikit-icons.min.js")
+    body
+        div.uk-container.uk-container-xsmall.uk-margin-large-top.uk-card.uk-card-default.uk-card-body
+            ul.uk-flex-center(uk-tab="" uk-switcher="")
+                li
+                    a(href="#") Вход
+                li
+                    a(href="") Регистрация
+
+            ul.uk-switcher.uk-margin
+                li
+                    form(id="login-form" onsubmit="return false")
+                        fieldset.uk-fieldset
+                            div.uk-margin
+                                input.uk-input(type="text" placeholder="Логин" name="login")
+                            div.uk-margin
+                                input.uk-input(type="password" placeholder="Пароль" name="password")
+                            div.uk-hidden.error.uk-alert-danger.uk-margin(uk-alert="")
+                            div.uk-margin
+                                input.uk-button.uk-button-primary(type="submit" value="Войти")
+
+                li
+                    form(id="register-form")
+                        fieldset.uk-fieldset
+                            div.uk-margin
+                                input.uk-input(type="text" placeholder="Имя" name="name")
+                            div.uk-margin
+                                input.uk-input(type="text" placeholder="Логин" name="login")
+                            div.uk-margin
+                                input.uk-input(type="password" placeholder="Пароль" name="password")
+                            div.uk-hidden.error.uk-alert-danger.uk-margin(uk-alert="")
+                            div.uk-margin
+                                input.uk-button.uk-button-primary(type="submit" value="Зарегистрироваться")
+
+        script(src="/public/js/login/login.min.js")

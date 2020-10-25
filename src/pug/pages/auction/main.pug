@@ -1,0 +1,26 @@
+html
+    head
+        title Аукцион
+        link(rel="stylesheet" href="/public/css/uikit.min.css" type="text/css")
+        script(src="/public/js/jquery.min.js")
+        script(src="/public/js/uikit.min.js")
+        script(src="/public/js/main.min.js")
+        script(src="/public/js/uikit-icons.min.js")
+
+    body
+        include ../../modules/menu
+        div.uk-container.uk-container-small.uk-margin-large
+            h2 Картины
+            div
+                include ../../modules/pictureWatcher
+
+        div.uk-container.uk-container-small.uk-margin-large
+            h2 Аукцион
+            div
+                include ../../modules/auctionInfo
+
+            include ../../modules/auctionUsers
+
+            h3 Лоты
+            include ../../modules/lotsWatcherBlock
+

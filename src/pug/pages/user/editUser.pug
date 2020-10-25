@@ -1,0 +1,33 @@
+html
+    head
+        title Редактировать картину
+        link(rel="stylesheet" href="/public/css/uikit.min.css" type="text/css")
+        script(src="/public/js/jquery.min.js")
+        script(src="/public/js/uikit.min.js")
+        script(src="/public/js/main.min.js")
+        script(src="/public/js/uikit-icons.min.js")
+
+    body
+        div.uk-container-small.uk-container
+            include ../../modules/menu
+
+        div.uk-margin.uk-container.uk-container-small
+            h2#user-login
+            div.uk-margin
+                label.uk-form-label Имя
+                input.uk-input(type='text' name='name')
+
+            div.uk-margin
+                label.uk-form-label Деньги
+                input.uk-input(type='number' name='money')
+
+            div.uk-margin
+                label.uk-form-label
+                    input.uk-checkbox(type='checkbox' name='isparticipant')
+                    span.uk-margin-small-left Участник аукциона
+
+            div.uk-margin
+                button.uk-button.uk-button-primary#save-user(type='button') Сохранить
+
+
+        script(src="/public/js/user/editUser.min.js")
